@@ -9,13 +9,13 @@ block_size = 8
 max_iters = 20000
 eval_interval = 300
 learning_rate = 1e-2
-#device = 'cuda' if torch.cuda.is_available() else 'cpu'
+device = 'cuda' if torch.cuda.is_available() else 'cpu'
 eval_iters = 200
 # Check if MPS is available
-if torch.backends.mps.is_available():
-    device = torch.device("mps")
-else:
-    device = torch.device("cpu")
+#if torch.backends.mps.is_available():
+#    device = torch.device("mps")
+#else:
+#    device = torch.device("cpu")
 # ---------------
 
 torch.manual_seed(1337)
